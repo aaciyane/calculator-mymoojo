@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator My Moojo</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:15px;background:#f5f5f3;color:#1a1a1a;padding:2rem 1rem;min-height:100vh}
+.container{max-width:700px;margin:0 auto}
+h1{font-size:20px;font-weight:600;margin-bottom:.25rem;color:#1a1a1a}
+.subtitle{font-size:13px;color:#6b6b6b;margin-bottom:2rem}
+.sec{background:#fff;border:0.5px solid rgba(0,0,0,0.12);border-radius:12px;padding:1.25rem;margin-bottom:1rem}
+.sec-title{font-size:12px;font-weight:500;color:#6b6b6b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem}
+.sec-desc{font-size:12px;color:#6b6b6b;margin-bottom:.875rem;line-height:1.5}
+.frow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.flabel{font-size:14px;color:#1a1a1a;flex:1;line-height:1.4}
+.flabel small{display:block;font-size:12px;color:#6b6b6b;margin-top:2px}
+.finput{display:flex;align-items:center;gap:6px}
+.funit{font-size:13px;color:#6b6b6b;min-width:28px}
+input[type=number],input[type=text]{font-family:inherit;font-size:14px;color:#1a1a1a;background:#fff;border:0.5px solid rgba(0,0,0,0.25);border-radius:8px;padding:6px 10px;outline:none;transition:border-color .15s}
+input[type=number]{width:110px;text-align:right}
+input[type=text]{flex:1}
+input[type=number]:focus,input[type=text]:focus{border-color:rgba(0,0,0,0.5)}
+input::placeholder{color:#aaa}
+.chan-grid{display:grid;grid-template-columns:1fr auto auto;gap:8px 10px;align-items:center;margin-bottom:8px}
+.chan-label{font-size:14px;color:#1a1a1a}
+.chan-unit{font-size:12px;color:#6b6b6b;white-space:nowrap}
+.chan-custom{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.chan-custom input[type=number]{width:110px}
+.amb-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.btn-add{font-size:13px;color:#05A499;background:none;border:0.5px dashed #05A499;border-radius:8px;padding:7px 14px;cursor:pointer;width:100%;margin-top:6px;font-family:inherit;transition:background .15s}
+.btn-add:hover{background:rgba(5,164,153,0.06)}
+.btn-rm{background:none;border:none;color:#aaa;cursor:pointer;font-size:18px;padding:0 4px;line-height:1;font-family:inherit}
+.btn-rm:hover{color:#FF3997}
+.big-stat{margin-top:.875rem;padding:.875rem 1rem;background:#F2EEE9;border-radius:8px}
+.big-stat-label{font-size:12px;color:#6b6b6b;margin-bottom:4px}
+.big-stat-value{font-size:28px;font-weight:600;color:#1a1a1a;line-height:1.1}
+.big-stat-unit{font-size:12px;color:#6b6b6b;margin-top:3px}
+.stat-line{display:flex;justify-content:space-between;align-items:center;padding:.5rem 0;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.stat-line:last-child{border-bottom:none;padding-bottom:0}
+.stat-label{font-size:13px;color:#6b6b6b}
+.stat-value{font-size:14px;font-weight:500;color:#1a1a1a}
+.res-row3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:10px}
+.metric{background:#F2EEE9;border-radius:8px;padding:.875rem 1rem;text-align:center}
+.metric-label{font-size:12px;color:#6b6b6b;margin-bottom:4px}
+.metric-value{font-size:20px;font-weight:500;color:#1a1a1a}
+.metric-sub{font-size:11px;color:#6b6b6b;margin-top:2px}
+.metric-danger{background:#fff0f4}.metric-danger .metric-value{color:#cc0066}.metric-danger .metric-label{color:#cc0066}
+.metric-warning{background:#fff3cc}.metric-warning .metric-value{color:#7a5500}.metric-warning .metric-label{color:#7a5500}
+.metric-success{background:#e6f7f6}.metric-success .metric-value{color:#057a72}.metric-success .metric-label{color:#057a72}
+.seuils{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:.75rem}
+.seuil{border-radius:8px;padding:.875rem;border:0.5px solid rgba(0,0,0,0.12)}
+.seuil-dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:5px;vertical-align:middle;flex-shrink:0}
+.seuil-header{font-size:11px;font-weight:500;margin-bottom:6px;display:flex;align-items:flex-start;line-height:1.4}
+.seuil-number{font-size:17px;font-weight:600;margin-bottom:.5rem}
+.seuil-desc{font-size:11px;color:#6b6b6b;line-height:1.4;margin-bottom:.5rem}
+.seuil-contrib-block{border-radius:6px;padding:.5rem .625rem;margin-top:.375rem}
+.seuil-contrib-label{font-size:10px;font-weight:500;margin-bottom:2px}
+.seuil-contrib-value{font-size:14px;font-weight:600}
+.seuil-contrib-collecte{font-size:11px;margin-top:1px}
+.s-palier .seuil-dot{background:#FF3997}
+.s-palier .seuil-header{color:#cc0066}
+.s-palier .seuil-number{color:#cc0066}
+.s-palier .seuil-contrib-block{background:#fff0f4}
+.s-palier .seuil-contrib-label,.s-palier .seuil-contrib-value,.s-palier .seuil-contrib-collecte{color:#cc0066}
+.s-min .seuil-dot{background:#FFAE00}
+.s-min .seuil-header{color:#FFAE00}
+.s-min .seuil-number{color:#FFAE00}
+.s-min .seuil-contrib-block{background:#fff3cc}
+.s-min .seuil-contrib-label,.s-min .seuil-contrib-value,.s-min .seuil-contrib-collecte{color:#FFAE00}
+.s-opt .seuil-dot{background:#05A499}
+.s-opt .seuil-header{color:#05A499}
+.s-opt .seuil-number{color:#05A499}
+.s-opt .seuil-contrib-block{background:#e6f7f6}
+.s-opt .seuil-contrib-label,.s-opt .seuil-contrib-value,.s-opt .seuil-contrib-collecte{color:#05A499}
+.alert-box{border-radius:8px;padding:.75rem 1rem;font-size:13px;line-height:1.6;margin-top:.75rem}
+.a-danger{background:#fff0f4;color:#cc0066;border:0.5px solid #FF3997}
+.a-warning{background:#fff3cc;color:#7a5500;border:0.5px solid #FFAE00}
+.a-success{background:#e6f7f6;color:#057a72;border:0.5px solid #05A499}
+.a-panier{background:#fff3cc;color:#7a5500;border:0.5px solid #FFAE00;border-radius:8px;padding:.625rem .875rem;font-size:12px;line-height:1.5;margin-top:6px}
+.info-icon{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:0.5px solid rgba(0,0,0,0.25);font-size:10px;font-weight:500;color:#6b6b6b;cursor:default;margin-left:6px;vertical-align:middle;position:relative}
+.tooltip{display:none;position:absolute;left:22px;top:-4px;background:#fff;border:0.5px solid rgba(0,0,0,0.2);border-radius:8px;padding:.5rem .75rem;font-size:12px;color:#1a1a1a;line-height:1.5;width:230px;z-index:10;font-weight:400;text-transform:none;letter-spacing:0;box-shadow:0 2px 8px rgba(0,0,0,0.1)}
+.info-icon:hover .tooltip{display:block}
+hr.sec-div{border:none;border-top:0.5px solid rgba(0,0,0,0.1);margin:.875rem 0}
+.btn-download{display:block;width:100%;margin-top:1.5rem;padding:.875rem;background:#FFDB44;color:#1a1a1a;border:none;border-radius:8px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;text-align:center;transition:background .15s}
+.btn-download:hover{background:#f0cc30}
+@media print{
+  body{background:#fff;padding:.5rem}
+  .btn-add,.btn-rm,.btn-download,.info-icon{display:none!important}
+  .sec{break-inside:avoid;border:1px solid #ddd;margin-bottom:.5rem}
+  .seuils{grid-template-columns:repeat(3,1fr)!important}
+  .res-row3{grid-template-columns:repeat(3,1fr)!important}
+}
+@media(max-width:560px){.res-row3{grid-template-columns:1fr}.seuils{grid-template-columns:1fr}.chan-grid{grid-template-columns:1fr auto auto}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Calculator My Moojo</h1>
+<p class="subtitle">Estime ton potentiel de campagne et tes objectifs d'inscrits avant de lancer.</p>
+
+<div class="sec">
+  <div class="sec-title">Objectif de campagne</div>
+  <div class="frow" style="margin-bottom:0">
+    <div class="finput" style="justify-content:flex-end;width:100%">
+      <input type="number" id="objectif" placeholder="0" min="500" step="500" style="width:160px;font-size:16px">
+      <span class="funit" style="font-size:15px">&euro;</span>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Palier 1
+    <span class="info-icon">i<span class="tooltip">Le palier 1 repr&eacute;sente 30% de ton objectif. C'est le montant que tu dois s&eacute;curiser dans les 48 &agrave; 72 premi&egrave;res heures de ta campagne pour installer une bonne dynamique de lancement.</span></span>
+  </div>
+  <div class="frow" style="margin-bottom:0">
+    <div class="flabel"><small>Calcul&eacute; automatiquement &agrave; 30% de l'objectif, ajustable</small></div>
+    <div class="finput"><input type="number" id="palier" placeholder="0" min="100" step="100"><span class="funit">&euro;</span></div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Ton r&eacute;seau</div>
+  <div class="chan-grid">
+    <div class="chan-label">LinkedIn</div>
+    <input type="number" data-chan id="linkedin" placeholder="0" min="0" step="10">
+    <span class="chan-unit">abonn&eacute;&middot;e&middot;s</span>
+    <div class="chan-label">Instagram</div>
+    <input type="number" data-chan id="instagram" placeholder="0" min="0" step="10">
+    <span class="chan-unit">abonn&eacute;&middot;e&middot;s</span>
+    <div class="chan-label">Facebook</div>
+    <input type="number" data-chan id="facebook" placeholder="0" min="0" step="10">
+    <span class="chan-unit">abonn&eacute;&middot;e&middot;s</span>
+    <div class="chan-label">Email</div>
+    <input type="number" data-chan id="email" placeholder="0" min="0" step="10">
+    <span class="chan-unit">contacts</span>
+    <div class="chan-label">Groupes de discussion</div>
+    <input type="number" data-chan id="groupes" placeholder="0" min="0" step="10">
+    <span class="chan-unit">contacts</span>
+  </div>
+  <div id="custom-channels"></div>
+  <button class="btn-add" onclick="addChannel()">+ Ajouter un canal</button>
+  <div class="big-stat">
+    <div class="big-stat-label">Taille de ton r&eacute;seau</div>
+    <div class="big-stat-value" id="r-reseau-inline">-</div>
+    <div class="big-stat-unit">personnes</div>
+  </div>
+  <div class="big-stat" style="margin-top:.625rem">
+    <div class="big-stat-label">Contributeur&middot;ice&middot;s potentiel&middot;le&middot;s</div>
+    <div class="big-stat-value" id="r-contrib-inline">-</div>
+    <div class="big-stat-unit">estim&eacute;&middot;e&middot;s &middot; 5% de conversion, moyenne observ&eacute;e sur les campagnes de crowdfunding</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Tes ambassadeur&middot;ice&middot;s</div>
+  <div class="sec-desc">Les ambassadeur&middot;ice&middot;s sont les partenaires et/ou relais qui peuvent partager ta campagne aupr&egrave;s de leur audience et t'apporter des contributeur&middot;ice&middot;s.</div>
+  <div id="amb-list"></div>
+  <button class="btn-add" onclick="addAmbassador()">+ Ajouter un&middot;e ambassadeur&middot;ice</button>
+  <div class="big-stat" style="margin-top:.75rem">
+    <div class="big-stat-label">Contributeur&middot;ice&middot;s suppl&eacute;mentaires potentiel&middot;le&middot;s</div>
+    <div class="big-stat-value" id="r-contrib-amb-inline">-</div>
+    <div class="big-stat-unit">estim&eacute;&middot;e&middot;s &middot; 1% de conversion, moyenne observ&eacute;e sur les campagnes de crowdfunding</div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Panier moyen</div>
+  <div class="sec-desc">Le montant calcul&eacute; automatiquement correspond au panier moyen minimum qu'il te faut pour atteindre ton objectif de collecte si tu arrives &agrave; convertir tou&middot;te&middot;s tes contributeur&middot;ice&middot;s potentiel&middot;le&middot;s. Ajuste-le avec ton panier moyen vis&eacute; pour d&eacute;finir tes objectifs d'inscrits en pr&eacute;-lancement.</div>
+  <div class="frow">
+    <div class="flabel"><small>Calcul&eacute; automatiquement sur la base de ton r&eacute;seau propre, ajustable</small></div>
+    <div class="finput"><input type="number" id="panier" placeholder="0" min="1" step="1"><span class="funit">&euro;</span></div>
+  </div>
+  <div id="panier-alert"></div>
+  <hr class="sec-div">
+  <div class="stat-line" style="padding-bottom:.5rem;margin-bottom:.5rem">
+    <span class="stat-label">Contributeur&middot;ice&middot;s n&eacute;cessaires pour le palier 1</span>
+    <span class="stat-value" id="r-contri-palier">-</span>
+  </div>
+  <div class="stat-line">
+    <span class="stat-label">Contributeur&middot;ice&middot;s n&eacute;cessaires pour l'objectif total</span>
+    <span class="stat-value" id="r-contri-total">-</span>
+  </div>
+</div>
+
+<div style="border-top:0.5px solid rgba(0,0,0,0.1);margin:1rem 0"></div>
+
+<div class="sec">
+  <div class="sec-title">R&eacute;sultats</div>
+  <div class="res-row3">
+    <div class="metric">
+      <div class="metric-label">Collecte projet&eacute;e</div>
+      <div class="metric-value" id="r-collecte">-</div>
+      <div class="metric-sub">r&eacute;seau propre uniquement</div>
+    </div>
+    <div class="metric" id="m-couv-palier">
+      <div class="metric-label">Couverture palier 1</div>
+      <div class="metric-value" id="r-couv-palier">-</div>
+    </div>
+    <div class="metric" id="m-couv-global">
+      <div class="metric-label">Couverture objectif global</div>
+      <div class="metric-value" id="r-couv-global">-</div>
+    </div>
+  </div>
+  <div id="r-alert"></div>
+</div>
+
+<div class="sec">
+  <div class="sec-title">Objectifs d'inscrits en pr&eacute;-lancement</div>
+  <div class="sec-desc">Bas&eacute; sur un taux de conversion de tes inscrits en contributeur&middot;ice&middot;s de 10%, moyenne observ&eacute;e sur les campagnes de crowdfunding. Les contributeur&middot;ice&middot;s restant&middot;e&middot;s sont &agrave; aller chercher via ta strat&eacute;gie de communication et tes relais pendant la campagne.</div>
+  <div class="seuils">
+    <div class="seuil s-palier">
+      <div class="seuil-header"><span class="seuil-dot"></span>Minimum absolu pour valider le palier 1</div>
+      <div class="seuil-number" id="s-palier">-</div>
+      <div class="seuil-desc">Le projet peut d&eacute;marrer. Minimum absolu pour lancer en confiance.</div>
+      <div class="seuil-contrib-block">
+        <div class="seuil-contrib-label">Contributeur&middot;ice&middot;s esp&eacute;r&eacute;&middot;e&middot;s</div>
+        <div class="seuil-contrib-value" id="s-palier-contrib">-</div>
+        <div class="seuil-contrib-collecte" id="s-palier-collecte"></div>
+      </div>
+    </div>
+    <div class="seuil s-min">
+      <div class="seuil-header"><span class="seuil-dot"></span>Minimum pour atteindre 50% de l'objectif global</div>
+      <div class="seuil-number" id="s-min">-</div>
+      <div class="seuil-desc">Le projet d&eacute;marre et se d&eacute;veloppe. Lancement possible avec strat&eacute;gie 360 active.</div>
+      <div class="seuil-contrib-block">
+        <div class="seuil-contrib-label">Contributeur&middot;ice&middot;s esp&eacute;r&eacute;&middot;e&middot;s</div>
+        <div class="seuil-contrib-value" id="s-min-contrib">-</div>
+        <div class="seuil-contrib-collecte" id="s-min-collecte"></div>
+      </div>
+    </div>
+    <div class="seuil s-opt">
+      <div class="seuil-header"><span class="seuil-dot"></span>Minimum pour atteindre 75% de l'objectif global</div>
+      <div class="seuil-number" id="s-opt">-</div>
+      <div class="seuil-desc">Le projet se d&eacute;ploie pleinement. Lancement en force, effet foule activ&eacute;.</div>
+      <div class="seuil-contrib-block">
+        <div class="seuil-contrib-label">Contributeur&middot;ice&middot;s esp&eacute;r&eacute;&middot;e&middot;s</div>
+        <div class="seuil-contrib-value" id="s-opt-contrib">-</div>
+        <div class="seuil-contrib-collecte" id="s-opt-collecte"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn-download" onclick="downloadPDF()">&#11123; T&eacute;l&eacute;charger mes r&eacute;sultats (PDF)</button>
+
+</div>
+
+<script>
+let channels=[];
+let ambassadors=[];
+let palierManual=false;
+let panierManual=false;
+
+function fmt(n){return Math.round(n).toLocaleString('fr-FR')}
+function fmtE(n){return Math.round(n).toLocaleString('fr-FR')+' €'}
+function fmtPct(n){return Math.round(n)+'%'}
+
+function addChannel(){
+  const id=Date.now();
+  channels.push({id,name:'',size:0});
+  renderChannels();
+}
+function removeChannel(id){
+  channels=channels.filter(c=>c.id!==id);
+  renderChannels();
+  calculate();
+}
+function updateChannel(id,field,val){
+  const c=channels.find(x=>x.id===id);
+  if(c)c[field]=val;
+  calculate();
+}
+function renderChannels(){
+  const wrap=document.getElementById('custom-channels');
+  wrap.innerHTML='';
+  channels.forEach(c=>{
+    const d=document.createElement('div');
+    d.className='chan-custom';
+    d.innerHTML=`<input type="text" placeholder="Nom du canal" value="${c.name}" oninput="updateChannel(${c.id},'name',this.value)"><input type="number" min="0" step="10" value="${c.size||''}" placeholder="0" style="width:110px;text-align:right" oninput="updateChannel(${c.id},'size',+this.value)"><button class="btn-rm" onclick="removeChannel(${c.id})" title="Supprimer">&times;</button>`;
+    wrap.appendChild(d);
+  });
+  calculate();
+}
+
+function addAmbassador(){
+  const id=Date.now();
+  ambassadors.push({id,name:'',size:0});
+  renderAmbassadors();
+}
+function removeAmbassador(id){
+  ambassadors=ambassadors.filter(a=>a.id!==id);
+  renderAmbassadors();
+  calculate();
+}
+function updateAmbassador(id,field,val){
+  const a=ambassadors.find(x=>x.id===id);
+  if(a)a[field]=val;
+  calculate();
+}
+function renderAmbassadors(){
+  const wrap=document.getElementById('amb-list');
+  wrap.innerHTML='';
+  ambassadors.forEach(a=>{
+    const d=document.createElement('div');
+    d.className='amb-row';
+    d.innerHTML=`<input type="text" placeholder="Nom / organisation" value="${a.name}" oninput="updateAmbassador(${a.id},'name',this.value)" style="flex:1"><input type="number" min="0" step="100" value="${a.size||''}" placeholder="0" style="width:110px;text-align:right" oninput="updateAmbassador(${a.id},'size',+this.value)"><span style="font-size:12px;color:#6b6b6b;white-space:nowrap;min-width:64px">abonné·e·s</span><button class="btn-rm" onclick="removeAmbassador(${a.id})" title="Supprimer">&times;</button>`;
+    wrap.appendChild(d);
+  });
+  calculate();
+}
+
+function calculate(){
+  const objectif=+document.getElementById('objectif').value||0;
+  const fixed=[
+    +document.getElementById('linkedin').value||0,
+    +document.getElementById('instagram').value||0,
+    +document.getElementById('facebook').value||0,
+    +document.getElementById('email').value||0,
+    +document.getElementById('groupes').value||0
+  ];
+  const customSum=channels.reduce((s,c)=>s+(c.size||0),0);
+  const reseauPropre=fixed.reduce((a,b)=>a+b,0)+customSum;
+  const reseauAmb=ambassadors.reduce((s,a)=>s+(a.size||0),0);
+  const contribPropre=Math.round(reseauPropre*0.05);
+  const contribAmb=Math.round(reseauAmb*0.01);
+
+  document.getElementById('r-reseau-inline').textContent=reseauPropre>0?fmt(reseauPropre):'-';
+  document.getElementById('r-contrib-inline').textContent=contribPropre>0?fmt(contribPropre):'-';
+  document.getElementById('r-contrib-amb-inline').textContent=contribAmb>0?fmt(contribAmb):'-';
+
+  if(!panierManual&&objectif>0&&contribPropre>0){
+    document.getElementById('panier').value=Math.round(objectif/contribPropre);
+  }
+  const panier=+document.getElementById('panier').value||0;
+
+  if(!palierManual&&objectif>0){
+    document.getElementById('palier').value=Math.round(objectif*0.30);
+  }
+  const palier=+document.getElementById('palier').value||0;
+
+  let panierAlert='';
+  if(panier>0&&panier<20){
+    panierAlert='<div class="a-panier">Attention, une contrepartie trop basse oriente le montant des dons libres à la baisse. Cela augmente le nombre de contributeur·ice·s nécessaires pour atteindre ton objectif.</div>';
+  }
+  document.getElementById('panier-alert').innerHTML=panierAlert;
+
+  const contriPalier=panier>0?Math.ceil(palier/panier):0;
+  const contriTotal=panier>0?Math.ceil(objectif/panier):0;
+  document.getElementById('r-contri-palier').textContent=contriPalier>0?fmt(contriPalier):'-';
+  document.getElementById('r-contri-total').textContent=contriTotal>0?fmt(contriTotal):'-';
+
+  const collecte=contribPropre*panier;
+  const couvPalier=palier>0?(collecte/palier)*100:0;
+  const couvGlobal=objectif>0?(collecte/objectif)*100:0;
+
+  document.getElementById('r-collecte').textContent=collecte>0?fmtE(collecte):'-';
+
+  const mCP=document.getElementById('m-couv-palier');
+  const mCG=document.getElementById('m-couv-global');
+  mCP.className='metric';
+  mCG.className='metric';
+
+  if(palier>0&&panier>0){
+    document.getElementById('r-couv-palier').textContent=fmtPct(couvPalier);
+    mCP.className='metric '+(couvPalier<100?'metric-danger':'metric-success');
+  } else { document.getElementById('r-couv-palier').textContent='-'; }
+
+  if(objectif>0&&panier>0){
+    document.getElementById('r-couv-global').textContent=fmtPct(couvGlobal);
+    if(couvGlobal<50) mCG.className='metric metric-danger';
+    else if(couvGlobal<80) mCG.className='metric metric-warning';
+    else mCG.className='metric metric-success';
+  } else { document.getElementById('r-couv-global').textContent='-'; }
+
+  let alert='';
+  if(objectif>0&&panier>0&&palier>0){
+    const ambInsuff=(contribAmb*panier)<(palier-collecte);
+    if(couvPalier<100){
+      const adsMsg=ambInsuff?' Tes ambassadeur·ice·s ne suffisent pas à couvrir l\'\u00e9cart : envisage des ads en pré-lancement si ta communauté est à construire.':'';
+      alert='<div class="alert-box a-danger">Ton réseau actuel couvre '+fmtPct(couvPalier)+' de ton palier 1. C\'est insuffisant pour lancer sereinement. Objectif : être sûr·e de sécuriser le minimum pour financer ton projet. Travaille à élargir ton audience avant le lancement.'+adsMsg+'</div>';
+    } else if(couvGlobal<50){
+      alert='<div class="alert-box a-warning">Ton réseau actuel couvre '+fmtPct(couvGlobal)+' de ton objectif. Tu es dans la zone d\'alerte. Un effort supplémentaire en pré-lancement est recommandé.</div>';
+    } else if(couvGlobal<80){
+      alert='<div class="alert-box a-warning">Ton réseau actuel couvre '+fmtPct(couvGlobal)+' de ton objectif. Tu peux lancer, mais une stratégie de communication 360 active pendant la campagne est indispensable.</div>';
+    } else {
+      alert='<div class="alert-box a-success">Ton réseau actuel couvre '+fmtPct(couvGlobal)+' de ton objectif. Tu peux lancer en confiance, l\'effet foule fera le reste.</div>';
+    }
+  }
+  document.getElementById('r-alert').innerHTML=alert;
+
+  const tx=0.10;
+  if(objectif>0&&panier>0&&palier>0){
+    const nPalier=Math.ceil(palier/panier/tx);
+    const nMin=Math.ceil((objectif*0.50)/panier/tx);
+    const nOpt=Math.ceil((objectif*0.75)/panier/tx);
+    const cPalier=Math.round(nPalier*tx);
+    const cMin=Math.round(nMin*tx);
+    const cOpt=Math.round(nOpt*tx);
+    document.getElementById('s-palier').textContent=fmt(nPalier)+' inscrits';
+    document.getElementById('s-min').textContent=fmt(nMin)+' inscrits';
+    document.getElementById('s-opt').textContent=fmt(nOpt)+' inscrits';
+    document.getElementById('s-palier-contrib').textContent=fmt(cPalier)+' contributeur·ice·s';
+    document.getElementById('s-palier-collecte').textContent='Collecte visée : '+fmtE(cPalier*panier);
+    document.getElementById('s-min-contrib').textContent=fmt(cMin)+' contributeur·ice·s';
+    document.getElementById('s-min-collecte').textContent='Collecte visée : '+fmtE(cMin*panier);
+    document.getElementById('s-opt-contrib').textContent=fmt(cOpt)+' contributeur·ice·s';
+    document.getElementById('s-opt-collecte').textContent='Collecte visée : '+fmtE(cOpt*panier);
+  } else {
+    ['s-palier','s-min','s-opt'].forEach(id=>document.getElementById(id).textContent='-');
+    ['s-palier-contrib','s-min-contrib','s-opt-contrib'].forEach(id=>document.getElementById(id).textContent='-');
+    ['s-palier-collecte','s-min-collecte','s-opt-collecte'].forEach(id=>document.getElementById(id).textContent='');
+  }
+}
+
+function downloadPDF(){
+  window.print();
+}
+
+document.getElementById('objectif').addEventListener('input',function(){
+  if(!palierManual){const v=+this.value||0;document.getElementById('palier').value=v>0?Math.round(v*0.30):'';}
+  panierManual=false;
+  calculate();
+});
+document.getElementById('palier').addEventListener('input',function(){palierManual=true;calculate();});
+document.getElementById('panier').addEventListener('input',function(){panierManual=true;calculate();});
+document.querySelectorAll('input[data-chan]').forEach(el=>{
+  el.addEventListener('input',function(){panierManual=false;calculate();});
+});
+calculate();
+</script>
+</body>
+</html>
